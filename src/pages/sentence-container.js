@@ -1,8 +1,8 @@
 import React from 'react';
-import Sentence from './sentence-container/sentence.js'
-import SentenceInput from './sentence-container/sentence-input.js'
-import WordHelp from './sentence-container/word-help.js'
-import Options from './sentence-container/options.js'
+import Sentence from '../components/sentence-container/sentence.js'
+import SentenceInput from '../components/sentence-container/sentence-input.js'
+import WordHelp from '../components/sentence-container/word-help.js'
+import Options from '../components/sentence-container/options.js'
 
 export default class SentencesContainer extends React.Component {
   render() {

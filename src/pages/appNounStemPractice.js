@@ -1,14 +1,13 @@
 import React from 'react';
 import * as SentenceActions from '../actions/sentence-actions.js'
 import SentenceContainer from './sentence-container.js'
-import NavBar from './navBar.js'
+import NavBar from '../components/navBar.js'
 import WordsStore from '../stores/wordsStore/wordsStore.js'
 import Config from '../stores/config/config.js'
 import GetWordInfoStore from '../stores/getWordInfo/getWordInfo.js'
 import NounStemPractice from './nounStemPractice'
-//import VocabularyList from './vocabularyList.js'
 
-export default class App extends React.Component {
+export default class appNounStemPractice extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,16 +59,6 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar/>
-        <SentenceContainer
-            checkCorrect={this.checkCorrect.bind(this)}
-            clickedWord={this.state.clickedWord}
-            config={this.state.config}
-            getWordInfo={this.getWordInfo.bind(this)}
-            newQuestion={this.newQuestion.bind(this)}
-            toggleSetting={this.toggleSetting.bind(this)}
-            wordList={ this.state.wordList }
-        />
         <NounStemPractice
           checkCorrect={this.checkCorrect.bind(this)}
           randomNoun={this.state.randomNoun}
