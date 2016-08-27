@@ -50,8 +50,8 @@ export default class App extends React.Component {
   getWordInfo(word) {
     SentenceActions.getWordInfo(word)
   }
-  newSentence(){
-    SentenceActions.newSentence()
+  newQuestion(question){
+    SentenceActions.newQuestion(question)
   }
   toggleSetting(setting, toggleTo) {
     SentenceActions.toggleSetting(setting, toggleTo);
@@ -61,13 +61,12 @@ export default class App extends React.Component {
     return (
       <div>
         <NavBar/>
-        <h1 className="text-center"> Latin Sentence Generator </h1>
         <SentenceContainer
             checkCorrect={this.checkCorrect.bind(this)}
             clickedWord={this.state.clickedWord}
             config={this.state.config}
             getWordInfo={this.getWordInfo.bind(this)}
-            newSentence={this.newSentence.bind(this)}
+            newQuestion={this.newQuestion.bind(this)}
             toggleSetting={this.toggleSetting.bind(this)}
             wordList={ this.state.wordList }
         />
@@ -75,7 +74,7 @@ export default class App extends React.Component {
           checkCorrect={this.checkCorrect.bind(this)}
           randomNoun={this.state.randomNoun}
           config={this.state.config}
-          newSentence={this.newSentence.bind(this)}
+          newQuestion={this.newQuestion.bind(this)}
           toggleSetting={this.toggleSetting.bind(this)}
         />
       </div>

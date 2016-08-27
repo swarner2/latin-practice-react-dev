@@ -7,7 +7,6 @@ import dictionaryFilter from './dictionaryFilter'
 export var pickWord = function(type, partOfSpeech){
   var dictionary = dictionaryFilter()
   var word;
-  console.log(partOfSpeech);
   if (type === 'any') {
     word = utilities().random(dictionary[partOfSpeech]);
   }

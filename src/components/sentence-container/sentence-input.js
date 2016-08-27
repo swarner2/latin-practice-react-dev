@@ -29,7 +29,7 @@ export default class SentenceInput extends React.Component {
   hitButton (e){
     if(this.props.config.showAnswer){
       //make a new sentence if the correct sentence was shown
-      this.props.newSentence();
+      this.props.newQuestion(this.props.question);
       //reset the input field to restart
       e.target.value = '';
       myStyle.textShadow = '';

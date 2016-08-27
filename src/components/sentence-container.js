@@ -8,6 +8,7 @@ export default class SentencesContainer extends React.Component {
   render() {
     return (
       <div className="container">
+      <h1 className="text-center"> Latin Sentence Generator </h1>
       {this.props.config.showHelp ?
         <WordHelp
           clickedWord={this.props.clickedWord}
@@ -32,9 +33,10 @@ export default class SentencesContainer extends React.Component {
       }
         <SentenceInput
           answer={this.props.wordList.latin}
+          question={'sentence'}
           checkCorrect={this.props.checkCorrect}
           config={this.props.config}
-          newSentence={this.props.newSentence}
+          newQuestion={this.props.newQuestion}
           toggleSetting={this.props.toggleSetting}
           />
         <Options

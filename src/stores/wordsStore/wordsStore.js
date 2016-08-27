@@ -22,12 +22,19 @@ class WordsStore extends EventEmitter {
 
   handleActions(action) {
     switch(action.type){
-      case "NEW_SENTENCE": {
-        var newSent = chooseSentence('transitiveSentence');
-        this.generatedSentence = newSent
-        this.wordList = newWordList(newSent)
-        this.emit('change')
-        break
+      case "NEW_QUESTION": {
+        if (action.question === 'sentence') {
+          var newSent = chooseSentence('transitiveSentence');
+          this.generatedSentence = newSent
+          this.wordList = newWordList(newSent)
+          this.emit('change')
+          break
+        }
+        if (action.question === 'noun') {
+          this.randomNoun = pickWord('any', 'nouns')
+          this.emit('change');
+          break
+        }
       }
     }
   }

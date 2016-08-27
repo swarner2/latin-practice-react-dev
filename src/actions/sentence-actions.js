@@ -19,9 +19,10 @@ export function getWordInfo(word){
   });
 }
 
-export function newSentence(){
+export function newQuestion(question){
   dispatcher.dispatch({
-    type: "NEW_SENTENCE",
+    type: "NEW_QUESTION",
+    question : question,
   });
 }
 

@@ -6,6 +6,7 @@ export default class NounStemPractice extends React.Component {
   render() {
     return (
       <div className="container">
+            <h1 className="text-center">Noun Stem Practice</h1>
             <h2
             className="row text-center sentence">
             {this.props.randomNoun.dictionaryEntry}
@@ -13,9 +14,10 @@ export default class NounStemPractice extends React.Component {
             <Answer answer={this.props.randomNoun.stem} config={this.props.config} answerSentence={true}/>
             <SentenceInput
               answer={[this.props.randomNoun.stem]}
+              question={'noun'}
               checkCorrect={this.props.checkCorrect}
               config={this.props.config}
-              newSentence={this.props.newSentence}
+              newQuestion={this.props.newQuestion}
               toggleSetting={this.props.toggleSetting}
               myStyle={''}
               />
