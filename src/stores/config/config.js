@@ -12,6 +12,11 @@ class Config extends EventEmitter {
         showAnswer : false,
         chapter : 'XXXIV',
         section : '3',
+        firstDeclension : true,
+        secondDeclension : true,
+        thirdDeclension : true,
+        fourthDeclension : true,
+        fifthDeclension : true,
       }
   }
 

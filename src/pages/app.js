@@ -1,12 +1,9 @@
 import React from 'react';
 import * as SentenceActions from '../actions/sentence-actions.js'
-import SentenceContainer from './sentence-container.js'
 import NavBar from '../components/navBar.js'
 import WordsStore from '../stores/wordsStore/wordsStore.js'
 import Config from '../stores/config/config.js'
 import GetWordInfoStore from '../stores/getWordInfo/getWordInfo.js'
-import NounStemPractice from './nounStemPractice'
-//import VocabularyList from './vocabularyList.js'
 
 export default class App extends React.Component {
   constructor(props) {

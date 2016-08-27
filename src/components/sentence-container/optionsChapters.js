@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Options extends React.Component {
+export default class OptionsChapters extends React.Component {
   handleChange(e){
     this.props.toggleSetting(e.target.name, e.target.value);
   }
@@ -8,8 +8,8 @@ export default class Options extends React.Component {
     return (
 
 <div className="container" >
-  <div>
-    Chapter
+  <div className="row text-center">
+    <div style={{color : 'white', paddingTop:"5px", paddingBottom:"5px", textShadow:"1px 1px 7px black"}}>Vocabulary Up To Chapter</div>
     <select name = "chapter" value={this.props.config.chapter} onChange={this.handleChange.bind(this)} >
       <option value = 'I'>I </option>
       <option value = 'II'>II </option>
@@ -47,14 +47,7 @@ export default class Options extends React.Component {
       <option value = 'XXXVI'>XXXVI</option>
     </select>
   </div>
-  <div>
-    Section
-    <select name = "section" value={this.props.config.section} onChange={this.handleChange.bind(this)} >
-      <option value = '1'>1 </option>
-      <option value = '2'>2 </option>
-      <option value = '3'>3 </option>
-    </select>
-  </div>
+
 </div>
 
     )

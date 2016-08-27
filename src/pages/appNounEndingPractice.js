@@ -4,9 +4,9 @@ import NavBar from '../components/navBar.js'
 import WordsStore from '../stores/wordsStore/wordsStore.js'
 import Config from '../stores/config/config.js'
 import GetWordInfoStore from '../stores/getWordInfo/getWordInfo.js'
-import NounStemPractice from '../components/nounStemPractice'
+import NounEndingPractice from '../components/nounEndingPractice'
 
-export default class appNounStemPractice extends React.Component {
+export default class appNounEndingPractice extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,7 +55,7 @@ export default class appNounStemPractice extends React.Component {
   render() {
     return (
       <div>
-        <NounStemPractice
+        <NounEndingPractice
           checkCorrect={this.checkCorrect.bind(this)}
           randomNoun={this.state.randomNoun}
           config={this.state.config}

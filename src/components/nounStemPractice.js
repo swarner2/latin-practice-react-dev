@@ -1,6 +1,6 @@
 import React from 'react';
-import Answer from '../components/nounStemPractice/answer'
-import SentenceInput from '../components/sentence-container/sentence-input.js'
+import Answer from './nounStemPractice/answer'
+import SentenceInput from './sentence-container/sentence-input.js'
 
 export default class NounStemPractice extends React.Component {
   render() {

@@ -1,8 +1,8 @@
 import React from 'react';
-import Sentence from '../components/sentence-container/sentence.js'
-import SentenceInput from '../components/sentence-container/sentence-input.js'
-import WordHelp from '../components/sentence-container/word-help.js'
-import Options from '../components/sentence-container/options.js'
+import Sentence from './sentence-container/sentence.js'
+import SentenceInput from './sentence-container/sentence-input.js'
+import WordHelp from './sentence-container/word-help.js'
+import OptionsChapters from './sentence-container/optionsChapters.js'
 
 export default class SentencesContainer extends React.Component {
   render() {
@@ -39,7 +39,7 @@ export default class SentencesContainer extends React.Component {
           newQuestion={this.props.newQuestion}
           toggleSetting={this.props.toggleSetting}
           />
-        <Options
+        <OptionsChapters
         config={this.props.config}
         toggleSetting={this.props.toggleSetting}
         />

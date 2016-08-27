@@ -5,6 +5,8 @@ import chooseSentence from '../../data/utilities/sentences/chooseSentence';
 import {newWordList} from './utilities/newWordList'
 import Config from '../config/config'
 import {pickWord} from '../../data/utilities/pickWord'
+import utilities from '../../data/utilities/utilities'
+import {grammar} from '../../data/grammars/verbGrammar'
 
 class WordsStore extends EventEmitter {
   constructor(){
@@ -12,7 +14,17 @@ class WordsStore extends EventEmitter {
     this.generatedSentence = chooseSentence(['transitiveSentence'],Config.stats.chapter, Config.stats.section)
     this.wordList = newWordList(this.generatedSentence)
     this.randomAdjective = pickWord('any', 'adjectives')
-    this.randomNoun = pickWord('any', 'nouns')
+    this.randomNoun = pickWord('any', 'nouns', 'declension')
+    this.randomNoun.case = utilities().random(['nominative', 'genitive', 'accusative', 'ablative', 'dative'])
+    this.randomNoun.number = utilities().random(['sg','pl'])
+    if (this.randomNoun.gender === 'C') {
+      this.randomNoun.gender = 'M';
+    }
+    this.randomNoun.ending = grammar[this.randomNoun.case][this.randomNoun.number][this.randomNoun.declension + this.randomNoun.gender]
+    if (this.randomNoun.ending === 'firstDict') {
+      this.randomNoun.stem = this.randomNoun.firstDict;
+      this.randomNoun.ending = '';
+    }
     this.randomVerb = pickWord('any', 'verbs')
   }
 
@@ -31,8 +43,18 @@ class WordsStore extends EventEmitter {
           break
         }
         if (action.question === 'noun') {
-          this.randomNoun = pickWord('any', 'nouns')
-          this.emit('change');
+          var noun = pickWord('any', 'nouns', 'declension')
+          this.randomNoun = noun;
+          this.randomNoun.case = utilities().random(['nominative', 'genitive', 'accusative', 'ablative', 'dative'])
+          this.randomNoun.number = utilities().random(['sg','pl'])
+          if (this.randomNoun.gender === 'C') {
+            this.randomNoun.gender = 'M';
+          }
+          this.randomNoun.ending = grammar[this.randomNoun.case][this.randomNoun.number][this.randomNoun.declension + this.randomNoun.gender]
+          if (this.randomNoun.ending === 'firstDict') {
+            this.randomNoun.stem = this.randomNoun.firstDict;
+            this.randomNoun.ending = '';
+          }          this.emit('change');
           break
         }
       }

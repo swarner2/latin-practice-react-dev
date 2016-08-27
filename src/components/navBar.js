@@ -26,6 +26,7 @@ export default class NavBar extends React.Component{
             <ul  className="nav navbar-nav">
               <li><Link to="SentencesContainer">Sentence Practice</Link></li>
               <li><Link to="NounStemPractice">Noun Stem Practice</Link></li>
+              <li><Link to="NounEndingPractice">Noun Ending Practice</Link></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
                 <li id="inputli">
