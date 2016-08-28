@@ -10,7 +10,7 @@ export default class OptionsChapters extends React.Component {
 <div className="container" >
   <div className="row text-center">
     <div style={{color : 'white', paddingTop:"5px", paddingBottom:"5px", textShadow:"1px 1px 7px black"}}>Vocabulary Up To Chapter</div>
-    <select name = "chapter" value={this.props.config.chapter} onChange={this.handleChange.bind(this)} >
+    <select name = "chapter" defaultValue={'XXXVI'}  onChange={this.handleChange.bind(this)} >
       <option value = 'I'>I </option>
       <option value = 'II'>II </option>
       <option value = 'III'>III </option>

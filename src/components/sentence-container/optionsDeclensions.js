@@ -9,7 +9,7 @@ export default class OptionsDeclensions extends React.Component {
     return (
 
 <div className="container" >
-  <div style={{color : 'white', paddingTop:"5px", paddingBottom:"5px", textShadow:"1px 1px 7px black"}} className="row text-center">Vocabulary Up To Chapter
+  <div style={{color : 'white', paddingTop:"5px", paddingBottom:"5px", textShadow:"1px 1px 7px black"}} className="row text-center">Declension Up To Chapter
     <div>
       <div>
         <input value={this.props.config.chapter} onChange={this.handleChange.bind(this)}  checked={this.props.config.firstDeclension} type="checkbox" name="firstDeclension" value="first"/>First Declension
@@ -29,7 +29,6 @@ export default class OptionsDeclensions extends React.Component {
     </div>
   </div>
 </div>
-
     )
   }
 }
