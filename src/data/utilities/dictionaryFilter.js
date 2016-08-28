@@ -4,7 +4,6 @@ import {handleChapters} from './handleChapters';
 import Config from '../../stores/config/config'
 
 export default function dictionaryFilter(filter){
-  console.log(dictionary);
   var filteredDictionary = {};
   if (filter === 'declension') {
     var usedDeclensions = [];

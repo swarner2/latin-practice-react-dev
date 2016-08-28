@@ -296,4 +296,17 @@ dictionary.adjectives = [
   new Adjective        ("        	your (pl)	","	vester, vestra, vestrum	",["asdf"],"	XII	",	1	),
 ];
 
+function worksheet(count){
+  var result = [];
+  var myFilter = dictionary.nouns.filter(function(word){return word.declension === "third"})
+  while(count !== 0){
+    var chosenWord = myFilter[Math.floor(Math.random() * myFilter.length)]
+    result.push(chosenWord.dictionaryEntry.trim() + "\t"+ chosenWord.stem.trim())
+    count--;
+  }
+  console.log(result.join("\n"))
+}
+
+worksheet(10)
+
 export {dictionary}

@@ -11,9 +11,9 @@ export default class NounStemPractice extends React.Component {
             className="row text-center sentence">
             {this.props.randomNoun.dictionaryEntry}
             </h2>
-            <Answer answer={this.props.randomNoun.stem} config={this.props.config} answerSentence={true}/>
+            <Answer answer={this.props.randomNoun.trueStem} config={this.props.config} answerSentence={true}/>
             <SentenceInput
-              answer={[this.props.randomNoun.stem]}
+              answer={[this.props.randomNoun.trueStem]}
               question={'noun'}
               checkCorrect={this.props.checkCorrect}
               config={this.props.config}
