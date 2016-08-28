@@ -12,8 +12,7 @@ export default class NounEndingPractice extends React.Component {
               { this.props.randomNoun.dictionaryEntry}
             </h2>
             <h3 className=" text-center sentence">
-              <div>{"Case: " + this.props.randomNoun.case + " "}</div>
-              <div>{"Number: " + this.props.randomNoun.number}</div>
+              <div>{ this.props.randomNoun.case + " " + this.props.randomNoun.number}</div>
             </h3>
 
             <Answer answer={this.props.randomNoun.stem + this.props.randomNoun.ending} config={this.props.config} answerSentence={true}/>
@@ -36,7 +35,7 @@ export default class NounEndingPractice extends React.Component {
   }
 }
 
-// 
+//
 // <div style={color: 'green';}>
 //   <div>{this.props.randomNoun.dictionaryEntry + " | " + "Case: " + this.props.randomNoun.case + " | " +  "Number: " + this.props.randomNoun.number}</div>
 //   <div>{this.props.randomNoun.stem + this.props.randomNoun.ending + /n}</div>

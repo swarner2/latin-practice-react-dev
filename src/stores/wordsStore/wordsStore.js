@@ -4,30 +4,16 @@ import _ from 'lodash'
 import chooseSentence from '../../data/utilities/sentences/chooseSentence';
 import {newWordList} from './utilities/newWordList'
 import Config from '../config/config'
-import {pickWord} from '../../data/utilities/pickWord'
-import utilities from '../../data/utilities/utilities'
-import {grammar} from '../../data/grammars/verbGrammar'
+import NewRandomVerb from './utilities/NewRandomVerb'
+import NewRandomNoun from './utilities/NewRandomNoun'
 
 class WordsStore extends EventEmitter {
   constructor(){
     super();
     this.generatedSentence = chooseSentence(['transitiveSentence'],Config.stats.chapter, Config.stats.section)
     this.wordList = newWordList(this.generatedSentence)
-    this.randomAdjective = pickWord('any', 'adjectives')
-    this.randomNoun = pickWord('any', 'nouns', 'declension')
-    this.randomNoun.case = utilities().random(['nominative', 'genitive', 'accusative', 'ablative', 'dative'])
-    this.randomNoun.number = utilities().random(['sg','pl'])
-    if (this.randomNoun.gender === 'C') {
-      this.randomNoun.gender = 'M';
-    }
-    this.randomNoun.ending = grammar[this.randomNoun.case][this.randomNoun.number][this.randomNoun.declension + this.randomNoun.gender]
-    this.randomNoun.trueStem = this.randomNoun.stem;
-    if (this.randomNoun.ending === 'firstDict') {
-      console.log(this.randomNoun.trueStem);
-      this.randomNoun.stem = this.randomNoun.firstDict;
-      this.randomNoun.ending = '';
-    }
-    this.randomVerb = pickWord('any', 'verbs')
+    this.randomNoun = NewRandomNoun(Config.stats);
+    this.randomVerb = NewRandomVerb(Config.stats);
   }
 
   getAll() {
@@ -45,23 +31,10 @@ class WordsStore extends EventEmitter {
           break
         }
         if (action.question === 'noun') {
-          var noun = pickWord('any', 'nouns', 'declension')
-          this.randomNoun = noun;
-          this.randomNoun.case = utilities().random(['nominative', 'genitive', 'accusative', 'ablative', 'dative'])
-          this.randomNoun.number = utilities().random(['sg','pl'])
-          if (this.randomNoun.gender === 'C') {
-            this.randomNoun.gender = 'M';
-          }
-          this.randomNoun.ending = grammar[this.randomNoun.case][this.randomNoun.number][this.randomNoun.declension + this.randomNoun.gender]
-          this.randomNoun.trueStem = this.randomNoun.stem
-          if (this.randomNoun.ending === 'firstDict') {
-            this.randomNoun.stem = this.randomNoun.firstDict;
-            this.randomNoun.ending = '';
-          }
+          this.randomNoun = NewRandomNoun(Config.stats)
         }
         if (action.question === 'verb') {
-          console.log('hit verb');
-          this.randomVerb = pickWord('any', 'verbs')
+          this.randomVerb = NewRandomVerb(Config.stats);
         }
           this.emit('change');
           break

@@ -35,6 +35,7 @@ export default class NavBar extends React.Component{
                 <a className="dropdown-toggle" data-toggle="dropdown" href="#">Verb Practice <span className="caret"></span></a>
                 <ul className="dropdown-menu">
                   <li><Link to="VerbStemPractice">Stem Practice</Link></li>
+                  <li><Link to="VerbEndingPractice">Ending Practice</Link></li>
                 </ul>
               </li>
             </ul>

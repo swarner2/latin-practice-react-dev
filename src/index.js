@@ -6,6 +6,7 @@ import appSentencesContainer from './pages/appSentencesContainer';
 import appNounStemPractice from './pages/appNounStemPractice';
 import appNounEndingPractice from './pages/appNounEndingPractice';
 import appVerbStemPractice from './pages/appVerbStemPractice';
+import appVerbEndingPractice from './pages/appVerbEndingPractice';
 
 render(
   <Router history={hashHistory}>
@@ -15,6 +16,7 @@ render(
       <Route path={"SentencesContainer"} component={appSentencesContainer}></Route>
       <Route path={"NounEndingPractice"} component={appNounEndingPractice}></Route>
       <Route path={"VerbStemPractice"} component={appVerbStemPractice}></Route>
+      <Route path={"VerbEndingPractice"} component={appVerbEndingPractice}></Route>
     </Route>
   </Router>,
 document.getElementById('app'));

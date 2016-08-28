@@ -1,6 +1,24 @@
 import { grammar } from './nounGrammar'
 
 grammar.verbs = {
+  stem : {
+    active : {
+      present : 'presentStem',
+      imperfect : 'presentStem',
+      future : 'presentStem',
+      perfect : 'perfectStem',
+      pluperfect : 'perfectStem',
+      futurePerfect : 'perfectStem',
+    },
+    passive : {
+      present : 'presentStem',
+      imperfect : 'presentStem',
+      future : 'presentStem',
+      perfect : 'participleStem',
+      pluperfect : 'participleStem',
+      futurePerfect : 'participleStem',
+    },
+  },
   connectingVowels : {
     present: {
       first: 'a',
@@ -15,6 +33,34 @@ grammar.verbs = {
       third: 'e',
       thirdIo: 'ie',
       fourth: 'ie',
+    },
+    future:{
+      first: 'a',
+      second: 'e',
+      third: 'e',
+      thirdIo: 'ie',
+      fourth: 'ie',
+    },
+    perfect: {
+      first: '',
+      second: '',
+      third: '',
+      thirdIo: '',
+      fourth: '',
+    },
+    pluperfect: {
+      first: '',
+      second: '',
+      third: '',
+      thirdIo: '',
+      fourth: '',
+    },
+    futurePerfect: {
+      first: '',
+      second: '',
+      third: '',
+      thirdIo: '',
+      fourth: '',
     },
   },
   personalEndings : {
@@ -34,7 +80,43 @@ grammar.verbs = {
         firstPersonpl: 'mur',
         secondPersonpl: 'mini',
         thirdPersonpl: 'ntur'
-      }
+      },
+    },
+    imperfect : {
+      active: {
+        firstPersonsg: 'bam',
+        secondPersonsg: 'bas',
+        thirdPersonsg: 'bat',
+        firstPersonpl: 'bamus',
+        secondPersonpl: 'batis',
+        thirdPersonpl: 'bant'
+      },
+      passive: {
+        firstPersonsg: 'bar',
+        secondPersonsg: 'baris',
+        thirdPersonsg: 'batur',
+        firstPersonpl: 'bamur',
+        secondPersonpl: 'bamini',
+        thirdPersonpl: 'bantur'
+      },
+    },
+    future : {
+      active: {
+        firstPersonsg: 'bo',
+        secondPersonsg: 'bis',
+        thirdPersonsg: 'bit',
+        firstPersonpl: 'bimus',
+        secondPersonpl: 'bitis',
+        thirdPersonpl: 'bunt'
+      },
+      passive: {
+        firstPersonsg: 'bor',
+        secondPersonsg: 'beris',
+        thirdPersonsg: 'bitur',
+        firstPersonpl: 'bimur',
+        secondPersonpl: 'bimini',
+        thirdPersonpl: 'buntur'
+      },
     },
     perfect : {
       active: {
@@ -52,16 +134,45 @@ grammar.verbs = {
         firstPersonpl: ' sumus',
         secondPersonpl: ' estis',
         thirdPersonpl: ' erunt'
-      }
-    }
+      },
+    },
+    pluperfect : {
+      active: {
+        firstPersonsg: 'eram',
+        secondPersonsg: 'eras',
+        thirdPersonsg: 'erat',
+        firstPersonpl: 'eramus',
+        secondPersonpl: 'eratis',
+        thirdPersonpl: 'erant'
+      },
+      passive: {
+        firstPersonsg: ' eram',
+        secondPersonsg: ' eras',
+        thirdPersonsg: ' erat',
+        firstPersonpl: ' eramus',
+        secondPersonpl: ' eratis',
+        thirdPersonpl: ' erant'
+      },
+    },
+    futurePerfect : {
+      active: {
+        firstPersonsg: 'ero',
+        secondPersonsg: 'eris',
+        thirdPersonsg: 'erit',
+        firstPersonpl: 'erimus',
+        secondPersonpl: 'eritis',
+        thirdPersonpl: 'erunt'
+      },
+      passive: {
+        firstPersonsg: ' ero',
+        secondPersonsg: ' eris',
+        thirdPersonsg: ' erit',
+        firstPersonpl: ' erimus',
+        secondPersonpl: ' eritis',
+        thirdPersonpl: ' erunt'
+      },
+    },
   },
-  tenseIdentifier : {
-    present : '',
-    future : 'bi',
-    imperfect : 'ba',
-    pluperfect : 'era',
-    futurePerfect : 'eri',
-  }
 };
 
 export { grammar }

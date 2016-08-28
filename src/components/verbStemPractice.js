@@ -3,11 +3,11 @@ import Answer from './nounStemPractice/answer'
 import SentenceInput from './sentence-container/sentence-input.js'
 import OptionsDeclensions from './sentence-container/optionsDeclensions'
 
-export default class NounStemPractice extends React.Component {
+export default class VerbStemPractice extends React.Component {
   render() {
     return (
       <div className="container">
-            <h1 className="text-center">Noun Stem Practice</h1>
+            <h1 className="text-center">Verb Stem Practice</h1>
             <h2
             className="row text-center sentence">
             {this.props.randomVerb.dictionaryEntry}

@@ -17,6 +17,18 @@ class Config extends EventEmitter {
         thirdDeclension : true,
         fourthDeclension : true,
         fifthDeclension : true,
+        present: true,
+        imperfect: true,
+        perfect: true,
+        future: true,
+        pluperfect: true,
+        futurePerfect: true,
+        activeVoice : true,
+        passiveVoice : true,
+        indicativeMood : true,
+        subjunctiveMood : false,
+        imperativeMood : false,
+
       }
   }
 
