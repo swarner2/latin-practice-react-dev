@@ -1,6 +1,7 @@
 import React from 'react';
 import Answer from './nounStemPractice/answer'
 import SentenceInput from './sentence-container/sentence-input.js'
+import OptionsDeclensions from './sentence-container/optionsDeclensions'
 
 export default class NounStemPractice extends React.Component {
   render() {
@@ -21,6 +22,11 @@ export default class NounStemPractice extends React.Component {
               toggleSetting={this.props.toggleSetting}
               myStyle={''}
               />
+            <OptionsDeclensions
+              config={this.props.config}
+              toggleSetting={this.props.toggleSetting}
+            />
+
         </div>
     )
   }

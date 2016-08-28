@@ -55,12 +55,16 @@ class WordsStore extends EventEmitter {
           this.randomNoun.ending = grammar[this.randomNoun.case][this.randomNoun.number][this.randomNoun.declension + this.randomNoun.gender]
           this.randomNoun.trueStem = this.randomNoun.stem
           if (this.randomNoun.ending === 'firstDict') {
-            console.log(this.randomNoun.trueStem);
             this.randomNoun.stem = this.randomNoun.firstDict;
             this.randomNoun.ending = '';
-          }          this.emit('change');
-          break
+          }
         }
+        if (action.question === 'verb') {
+          console.log('hit verb');
+          this.randomVerb = pickWord('any', 'verbs')
+        }
+          this.emit('change');
+          break
       }
     }
   }
