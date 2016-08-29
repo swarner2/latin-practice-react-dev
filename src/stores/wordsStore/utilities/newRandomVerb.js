@@ -57,13 +57,13 @@ export default function NewRandomVerb(Config){
   chosenVerb.mood = utilities().random(usedMoods)
 
   var usedPersons = []
-  if(Config.present){
+  if(Config.firstPerson){
     usedPersons.push('firstPerson')
   }
-  if(Config.imperfect){
+  if(Config.secondPerson){
     usedPersons.push('secondPerson')
   }
-  if(Config.future){
+  if(Config.thirdPerson){
     usedPersons.push('thirdPerson')
   }
   chosenVerb.person = utilities().random(usedPersons)

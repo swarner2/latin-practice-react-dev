@@ -28,6 +28,9 @@ class Config extends EventEmitter {
         indicativeMood : true,
         subjunctiveMood : false,
         imperativeMood : false,
+        firstPerson : true,
+        secondPerson : true,
+        thirdPerson : true,
 
       }
   }
