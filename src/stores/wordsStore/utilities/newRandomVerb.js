@@ -110,9 +110,13 @@ export default function NewRandomVerb(Config){
         chosenVerb.usedStem = chosenVerb.usedStem + 'a'
       }    }
   }
-
-  if ((chosenVerb.connectingVowel + chosenVerb.ending).match(/int$/)) {
-    (chosenVerb.connectingVowel + chosenVerb.ending).replace(/int$/, 'unt')
+  if (chosenVerb.connectingVowel === 'i' && chosenVerb.ending.match('nt')) {
+    if(chosenVerb.conjugation === 'fourth' || chosenVerb.conjugation === 'thirdIo'){
+      chosenVerb.connectingVowel = 'iu';
+    }
+    else {
+      chosenVerb.connectingVowel = 'u'
+    }
   }
 
   //reset for deponents
