@@ -10,13 +10,19 @@ class Config extends EventEmitter {
         answerIsCorrect : true,
         showHelp : false,
         showAnswer : false,
+
+        //chapter config
         chapter : 'XXXIV',
         section : '3',
+
+        //noun config
         firstDeclension : true,
         secondDeclension : true,
         thirdDeclension : true,
         fourthDeclension : true,
         fifthDeclension : true,
+
+        //verb config
         present: true,
         imperfect: true,
         perfect: true,
@@ -32,6 +38,31 @@ class Config extends EventEmitter {
         secondPerson : true,
         thirdPerson : true,
 
+        //noun translation config
+        //nomincative
+        subject : true,
+        predicateNominative : true,
+        //genitive
+        possession : true,
+        //dative
+        indirectObject : true,
+        //accusative
+        directObject : true,
+        placeToWhere : true,
+        placeWithinWhich : true,
+        accusativeSubject : true,
+        placeToWhereCities : true,
+        //ablative
+        placeWhere : true,
+        agent : true,
+        accompaniment : true,
+        placeFrom : true,
+        placeFromCities: true,
+        instrument : true,
+        //vocative
+        directAddress : true,
+        //locative
+        placeWhereCities : true,
       }
   }
 

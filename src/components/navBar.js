@@ -30,6 +30,7 @@ export default class NavBar extends React.Component{
                 <ul className="dropdown-menu">
                   <li><Link to="NounStemPractice">Stem Practice</Link></li>
                   <li><Link to="NounEndingPractice">Ending Practice</Link></li>
+                  <li><Link to="NounCaseUsePractice">Case Use English Practice</Link></li>
                 </ul>
               </li>              <li className="dropdown">
                 <a className="dropdown-toggle" data-toggle="dropdown" href="#">Verb Practice <span className="caret"></span></a>
