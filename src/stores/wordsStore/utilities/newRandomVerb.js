@@ -71,10 +71,12 @@ export default function NewRandomVerb(Config){
   chosenVerb.usedStem = chosenVerb[grammar.verbs.stem[chosenVerb.voice][chosenVerb.tense]]
   chosenVerb.connectingVowel = grammar.verbs.connectingVowels[chosenVerb.tense][chosenVerb.conjugation]
   chosenVerb.ending = grammar.verbs.personalEndings[chosenVerb.tense][chosenVerb.voice][chosenVerb.person + chosenVerb.number]
-  console.log(chosenVerb.person, chosenVerb.number, chosenVerb.ending);
+
 
   if (chosenVerb.ending === 'or' || chosenVerb.ending === 'o') {
-    chosenVerb.connectingVowel = '';
+    if (chosenVerb.conjugation === 'first' || chosenVerb.conjugation === 'third') {
+      chosenVerb.connectingVowel = '';
+    }
   }
   //catch different future
   if (chosenVerb.conjugation === 'third' || chosenVerb.conjugation === 'thirdIo' || chosenVerb.conjugation === 'fourth') {

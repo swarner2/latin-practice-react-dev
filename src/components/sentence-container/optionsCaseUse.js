@@ -42,6 +42,9 @@ export default class OptionsCaseUse extends React.Component {
         <input  onChange={this.handleChange.bind(this)}  checked={this.props.config.placeWhere} type="checkbox" name="placeWhere" value="fifth"/>place where
       </div>
       <div>
+        <input  onChange={this.handleChange.bind(this)}  checked={this.props.config.placeFrom} type="checkbox" name="placeFrom" value="fifth"/>place from
+      </div>
+      <div>
         <input  onChange={this.handleChange.bind(this)}  checked={this.props.config.agent} type="checkbox" name="agent" value="fifth"/>agent
       </div>
       <div>

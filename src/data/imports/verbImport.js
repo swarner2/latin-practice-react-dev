@@ -162,7 +162,7 @@ new Verb("	to think out, devise	","	excogito, excogitare, excogitavi, excogitatu
 new Verb("	to torture, torment	","	excrucio, excruciare, excruciavi, excruciatus	","	t	","	XXXIV	",	2	,"	peron, animal	"),
 new Verb("	to run out, rush out	","	excurro, excurrere, excucurri, excursus	","	i	","	XXXIII	",	3	,"		"),
 new Verb("	to excuse	","	excuso, excusare, excusavi, excusatus	","	t	","	XXI	",	2	,"	person	"),
-new Verb("	to drain, drink up	","	exhaurio, exhurire, exhausi, exhaustus	","	t	","	XXX	",	3	,"	container of liquid	"),
+new Verb("	to drain, drink up	","	exhaurio, exhaurire, exhausi, exhaustus	","	t	","	XXX	",	3	,"	container of liquid	"),
 new Verb("	to think ( e)	","	existimo, existimare, esistimavi, existimatus	","	c	","	XXVII	",	2	,"		"),
 new Verb("	to decorate (e )	","	exorno, are, avi, atus	","	t	","	XXX	",	2	,"	place	"),
 new Verb("	to put out, expose	","	expono, exponere, exposui, expositus	","	t	","	XXIX	",	2	,"	action, thing	"),
