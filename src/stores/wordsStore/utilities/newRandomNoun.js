@@ -115,8 +115,8 @@ export default function NewRandomNoun(Config){
   noun.translation = getTranslation(noun);
   noun.nonCamelCaseUse = grammar.caseUses[noun.caseUse].nonCamelCaseUse
   console.log(noun);
-  noun.ending = grammar[noun.case][noun.number][noun.declension + noun.gender]
   noun.trueStem = noun.stem;
+  noun.ending = grammar[noun.case][noun.number][noun.declension + noun.gender]
   if (noun.ending === 'firstDict') {
     noun.stem = noun.firstDict;
     noun.ending = '';
