@@ -2,6 +2,7 @@ import {dictionary} from '../../../data/imports/adjectiveImport';
 import utilities from '../../../data/utilities/utilities'
 import {grammar} from '../../../data/grammars/verbGrammar'
 import {pickWord} from '../../../data/utilities/pickWord'
+import NewRandomAdjective from './NewRandomAdjective'
 
 
 export default function NewRandomNoun(Config){
@@ -71,7 +72,7 @@ export default function NewRandomNoun(Config){
   if (noun.gender === 'C') {
     noun.gender = 'M';
   }
-
+  noun.adjective = NewRandomAdjective(noun.gender, noun.number, noun.case)
   // if (grammar.caseUses.prep !== undefined) {
   //   var prep = utilities()random(grammar.caseUses.prep);
   //   if (prep === 'ex') {
@@ -113,6 +114,8 @@ export default function NewRandomNoun(Config){
 
   }
   noun.translation = getTranslation(noun);
+  noun.translationWithAdjective = noun.translation.replace(noun.meaning, noun.adjective.meaning + " " + noun.meaning)
+
   noun.nonCamelCaseUse = grammar.caseUses[noun.caseUse].nonCamelCaseUse
   console.log(noun);
   noun.trueStem = noun.stem;
