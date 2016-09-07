@@ -33,6 +33,11 @@ export var pickWord = function(type, partOfSpeech, filter){
   // //if the word is already used in usedWords make a newWord
   // if(usedWords.indexOf(word) === -1){
   //   usedWords.push(word);
+  if (partOfSpeech === 'adjectives') {
+    if (word.declension === 'second' || word.declension === 'first') {
+      console.log(word);
+    }
+  }
     return word;
   // }
   // else{

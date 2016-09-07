@@ -78,15 +78,27 @@ export default function NewRandomVerb(Config){
       chosenVerb.connectingVowel = '';
     }
   }
+  if (chosenVerb.ending === 'ris') {
+    if (chosenVerb.tense === 'present' && chosenVerb.conjugation === 'third') {
+      chosenVerb.connectingVowel = 'e';
+    }
+  }
   //catch different future
   if (chosenVerb.conjugation === 'third' || chosenVerb.conjugation === 'thirdIo' || chosenVerb.conjugation === 'fourth') {
     if (chosenVerb.tense === 'future') {
       chosenVerb.ending = grammar.verbs.personalEndings['present'][chosenVerb.voice][chosenVerb.person + chosenVerb.number]
       if(chosenVerb.ending === 'o'){
         choscenVerb.ending = 'm';
+        chosenVerb.connectingVowel = chosenVerb.connectingVowel.replace('e', 'a')
+      }
+      if(chosenVerb.ending === 'or'){
+          chosenVerb.ending = 'r'
+          chosenVerb.connectingVowel = chosenVerb.connectingVowel.replace('e', 'a')
+        }
       }
     }
-  }
+
+
   //add noun ending onto stem if passive perfect system
   if (chosenVerb.usedStem === chosenVerb.participleStem) {
     chosenVerb.gender = utilities().random(['M', 'F', 'N'])

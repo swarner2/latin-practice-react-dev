@@ -49,8 +49,8 @@ export default function dictionaryFilter(filter){
     .filter(function(word){
       return inChapters(word);
     });
-  }
 
+     }
   return filteredDictionary;
 
 }

@@ -50,13 +50,13 @@ function test(x){
 		if (dictionaryEntry.match('us, a, um') || dictionaryEntry.match('us, -a, -um')) {
 			return 'first/second, standard';
 		}
-		if (dictionaryEntry.match('er,') && dictionaryEntry.match('ra,')) {
+		else if (dictionaryEntry.match('er,') && dictionaryEntry.match('ra,')) {
 			return 'first/second, er';
 		}
-		if (dictionaryEntry.match('ns,')) {
+		else if (dictionaryEntry.match('ns,')) {
 			return 'third, ns';
 		}
-		if (dictionaryEntry.match('is,') || dictionaryEntry.match('is$') ) {
+		else if (dictionaryEntry.match('is,') || dictionaryEntry.match('is$') ) {
 			return 'third, standard';
 		}
 		else {
@@ -84,4 +84,5 @@ function test(x){
 				break;
 			}
 	}
+	return this;
 }

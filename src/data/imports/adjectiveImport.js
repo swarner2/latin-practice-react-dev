@@ -105,7 +105,7 @@ dictionary.adjectives = [
   new Adjective        ("        	immortal	","	immortalis, -e	",["asdf"],"	XXVIII	",	1	),
   new Adjective        ("        	unequal	","	impar, imparis	",["asdf"],"	XXIV	",	1	),
   new Adjective        ("        	impatient	","	impatiens, impatientis	",["asdf"],"	XXXI	",	1	),
-  new Adjective        ("        	active, energetic	","	impiger, -gra, -grum	",["asdf"],"	XVIII	",	2	),
+  new Adjective        ("        	active, energetic	","	impiger, impigra, impigrum	",["asdf"],"	XVIII	",	2	),
   new Adjective        ("        	bad behaving	","	improbus, -a, -um	",["asdf"],"	III	",	2	),
   new Adjective        ("        	bottom of	","	imus, -a, -um	",["asdf"],"	XXX	",	2	),
   new Adjective        ("        	uncertain	","	incertus, -a, -um	",["asdf"],"	XVII 	",	3	),
