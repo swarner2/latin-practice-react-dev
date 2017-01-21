@@ -34,7 +34,8 @@ export default function NewRandomNoun(Config){
   }
   if(Config.placeToWhereCities){
     usedCaseUse.push('placeToWhereCities')
-  }  if(Config.placeWhere){
+  }
+  if(Config.placeWhere){
     usedCaseUse.push('placeWhere')
   }
   if(Config.placeFrom){
@@ -89,8 +90,8 @@ export default function NewRandomNoun(Config){
 
   function getTranslation(noun){
     var result = []
-    result.push(grammar.caseUses[noun.caseUse][noun.number].prefix);
-    result.push(grammar.caseUses[noun.caseUse][noun.number].suffix);
+    result.push(grammar.caseUses[noun.caseUse][noun.number].englishPrefix);
+    result.push(grammar.caseUses[noun.caseUse][noun.number].englishSuffix);
     if (grammar.caseUses[noun.caseUse][noun.number].extraSuffix) {
       result.push(grammar.caseUses[noun.caseUse][noun.number].extraSuffix)
     }
@@ -114,6 +115,9 @@ export default function NewRandomNoun(Config){
 
   }
   noun.translation = getTranslation(noun);
+
+
+
   noun.translationWithAdjective = noun.translation.replace(noun.meaning, noun.adjective.meaning + " " + noun.meaning)
 
   noun.nonCamelCaseUse = grammar.caseUses[noun.caseUse].nonCamelCaseUse

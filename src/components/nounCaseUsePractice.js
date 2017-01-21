@@ -7,9 +7,10 @@ export default class NounCaseUsePractice extends React.Component {
   render() {
     return (
       <div className="container">
-            <h1 className="text-center">Noun Case Use English Practice</h1>
+            <h1 className="text-center">Noun Case Use Practice</h1>
             <h2 className="text-center sentence">
-              { this.props.randomNoun.translation}
+              <div> { this.props.randomNoun.dictionaryEntry}</div>
+              <div>  { this.props.randomNoun.translation}</div>
             </h2>
             <h3 className=" text-center sentence">
               <div>Give the Case and Case Use</div>
@@ -34,9 +35,3 @@ export default class NounCaseUsePractice extends React.Component {
     )
   }
 }
-
-//
-// <div style={color: 'green';}>
-//   <div>{this.props.randomNoun.dictionaryEntry + " | " + "Case: " + this.props.randomNoun.case + " | " +  "Number: " + this.props.randomNoun.number}</div>
-//   <div>{this.props.randomNoun.stem + this.props.randomNoun.ending + /n}</div>
-// </div>

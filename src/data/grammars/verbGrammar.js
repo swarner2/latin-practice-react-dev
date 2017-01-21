@@ -133,7 +133,7 @@ grammar.verbs = {
         thirdPersonsg: ' est',
         firstPersonpl: ' sumus',
         secondPersonpl: ' estis',
-        thirdPersonpl: ' erunt'
+        thirdPersonpl: ' sunt'
       },
     },
     pluperfect : {

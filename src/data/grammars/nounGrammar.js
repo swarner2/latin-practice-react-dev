@@ -231,37 +231,49 @@ export var grammar = {
       nonCamelCaseUse : 'subject',
       case : 'nominative',
       sg : {
-        prefix : 'this',
-        suffix : ' is verbing',
+        englishPrefix : 'this',
+        englishSuffix : ' is verbing',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'this',
-        suffix : ' are verbing',
+        englishPrefix : 'this',
+        englishSuffix : ' are verbing',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     predicateNominative : {
       nonCamelCaseUse : 'predicate',
       case : 'nominative',
-      sg : {
-        prefix : 'something is ',
-        suffix : 'this',
-      },
-      pl : {
-        prefix : 'somethings are ',
-        suffix : 'this',
-      }
+        sg : {
+          englishPrefix : 'something is ',
+          englishSuffix : 'this',
+          latinPrefix : "",
+          latinSuffix : "",
+        },
+        pl : {
+          englishPrefix : 'somethings are ',
+          englishSuffix : 'this',
+          latinPrefix : "",
+          latinSuffix : "",
+        }
     },
     //genitive
     possession : {
       nonCamelCaseUse : 'possession',
       case : 'genitive',
       sg : {
-        prefix : 'something of ',
-        suffix : 'this',
+        englishPrefix : 'something of ',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'something of',
-        suffix : 'this',
+        englishPrefix : 'something of',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     //dative
@@ -269,12 +281,16 @@ export var grammar = {
       nonCamelCaseUse : 'indirect object',
       case : 'dative',
       sg : {
-        prefix : 'the action happens for',
-        suffix : 'this',
+        englishPrefix : 'the action happens for',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'the action happens for',
-        suffix : 'this',
+        englishPrefix : 'the action happens for',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     //accusative
@@ -282,12 +298,16 @@ export var grammar = {
       nonCamelCaseUse : 'direct object',
       case : 'accusative',
       sg : {
-        prefix : 'the subject verbs',
-        suffix : 'this',
+        englishPrefix : 'the subject verbs',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'the subject verbs',
-        suffix : 'this',
+        englishPrefix : 'the subject verbs',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     placeToWhere : {
@@ -300,12 +320,16 @@ export var grammar = {
         { latin:'trans', english: 'across'}
       ],
       sg : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     placeWithinWhich : {
@@ -318,38 +342,50 @@ export var grammar = {
         {latin:'ante', english: 'in front of'},
       ],
       sg : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     accusativeSubject : {
       nonCamelCaseUse : 'subject',
       case : 'accusative',
       sg : {
-        prefix : 'the subject perceives/says that',
-        suffix : 'this',
-        extraSuffix : 'verbs'
+        englishPrefix : 'the subject perceives/says that',
+        englishSuffix : 'this',
+        extraSuffix : 'verbs',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'the subject perceives that',
-        suffix : 'this',
-        extraSuffix : 'verb'
+        englishPrefix : 'the subject perceives that',
+        englishSuffix : 'this',
+        extraSuffix : 'verb',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     placeToWhereCities : {
       nonCamelCaseUse : 'place to where',
       case : 'accusative',
       sg : {
-        prefix : 'toward',
-        suffix : 'this',
+        englishPrefix : 'toward',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'toward',
-        suffix : 'this',
+        englishPrefix : 'toward',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     //ablative
@@ -362,12 +398,16 @@ export var grammar = {
         {latin: 'super', english : 'above'},
       ],
       sg : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     agent : {
@@ -377,12 +417,16 @@ export var grammar = {
         {latin : 'ab', english : 'by'}
       ],
       sg : {
-        prefix : 'the subject is verbed by',
-        suffix : 'this',
+        englishPrefix : 'the subject is verbed by',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'the subject is verbed by',
-        suffix : 'this',
+        englishPrefix : 'the subject is verbed by',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     accompaniment : {
@@ -393,12 +437,16 @@ export var grammar = {
         {latin : 'sine', english : 'without'}
       ],
       sg : {
-        prefix : 'the subject verbs together with',
-        suffix : 'this',
+        englishPrefix : 'the subject verbs together with',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'the subject verbs together with',
-        suffix : 'this',
+        englishPrefix : 'the subject verbs together with',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     placeFrom : {
@@ -410,37 +458,49 @@ export var grammar = {
         {latin: 'ab', english: 'from'}
       ],
       sg : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'prep',
-        suffix : 'this',
+        englishPrefix : 'prep',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     placeFromCities: {
       nonCamelCaseUse : 'place from',
       case : 'ablative',
       sg : {
-        prefix : 'from',
-        suffix : 'this',
+        englishPrefix : 'from',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'from',
-        suffix : 'this',
+        englishPrefix : 'from',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     instrument : {
       nonCamelCaseUse : 'instrument',
       case : 'ablative',
       sg : {
-        prefix : 'the subject uses',
-        suffix : 'this',
+        englishPrefix : 'the subject uses',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
         extraSuffix : 'to verb'
       },
       pl : {
-        prefix : 'the subject uses',
-        suffix : 'this',
+        englishPrefix : 'the subject uses',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
         extraSuffix : 'to verb'
       }
     },
@@ -449,12 +509,16 @@ export var grammar = {
       nonCamelCaseUse : 'directAddress',
       case : 'vocative',
       sg : {
-        prefix : 'this',
-        suffix : '!',
+        englishPrefix : 'this',
+        englishSuffix : '!',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'this',
-        suffix : '!',
+        englishPrefix : 'this',
+        englishSuffix : '!',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
     //locative
@@ -462,12 +526,16 @@ export var grammar = {
       nonCamelCaseUse : 'place where',
       case : 'locative',
       sg : {
-        prefix : 'in',
-        suffix : 'this',
+        englishPrefix : 'in',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       },
       pl : {
-        prefix : 'in',
-        suffix : 'this',
+        englishPrefix : 'in',
+        englishSuffix : 'this',
+        latinPrefix : "",
+        latinSuffix : "",
       }
     },
   }

@@ -11,6 +11,7 @@ export default class VerbEndingPractice extends React.Component {
             <h2
               className="row text-center sentence">
               {this.props.randomVerb.dictionaryEntry}
+              {this.props.randomVerb.subject}
             </h2>
             <h4 className="row text-center sentence">{this.props.randomVerb.person + " | " + this.props.randomVerb.number + " | " + this.props.randomVerb.tense + " | " + this.props.randomVerb.voice + " | " + this.props.randomVerb.mood }{this.props.randomVerb.gender !== undefined ? " | "  +  this.props.randomVerb.gender : ''}</h4>
             <Answer answer={this.props.randomVerb.usedStem + this.props.randomVerb.connectingVowel + this.props.randomVerb.ending} config={this.props.config} answerSentence={true}/>
