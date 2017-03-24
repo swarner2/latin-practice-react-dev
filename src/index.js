@@ -11,11 +11,13 @@ import appVerbStemPractice from './pages/appVerbStemPractice';
 import appVerbEndingPractice from './pages/appVerbEndingPractice';
 import appAdjectiveEndingPractice from './pages/appAdjectiveEndingPractice';
 import appAdjectivePlusNounEndingPractice from './pages/appAdjectivePlusNounEndingPractice';
+import appLogin from './pages/appLogin';
 
 render(
   <Router history={hashHistory}>
     <Route path='/' component={App}>
-      <IndexRoute component={appSentencesContainer}></IndexRoute>
+      <IndexRoute component={appLogin}></IndexRoute>
+      <Route path={"Login"} component={appLogin}></Route>
       <Route path={"NounStemPractice"} component={appNounStemPractice}></Route>
       <Route path={"SentencesContainer"} component={appSentencesContainer}></Route>
       <Route path={"NounDeclensionNumberPractice"} component={appNounDeclensionNumberPractice}></Route>

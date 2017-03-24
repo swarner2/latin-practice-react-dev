@@ -233,14 +233,14 @@ export var grammar = {
       sg : {
         englishPrefix : 'this',
         englishSuffix : ' is verbing',
-        latinPrefix : "",
+        latinPrefix : "firstDict",
         latinSuffix : "",
       },
       pl : {
         englishPrefix : 'this',
         englishSuffix : ' are verbing',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     predicateNominative : {
@@ -249,14 +249,16 @@ export var grammar = {
         sg : {
           englishPrefix : 'something is ',
           englishSuffix : 'this',
-          latinPrefix : "",
+          latinPrefix : "firstDict",
           latinSuffix : "",
+          extraLatinSuffix : " est"
         },
         pl : {
           englishPrefix : 'somethings are ',
           englishSuffix : 'this',
-          latinPrefix : "",
-          latinSuffix : "",
+          latinPrefix : "stem",
+          latinSuffix : "ending",
+          extraLatinSuffix : " sunt"
         }
     },
     //genitive
@@ -266,14 +268,14 @@ export var grammar = {
       sg : {
         englishPrefix : 'something of ',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'something of',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     //dative
@@ -283,14 +285,14 @@ export var grammar = {
       sg : {
         englishPrefix : 'the action happens for',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'the action happens for',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     //accusative
@@ -300,14 +302,14 @@ export var grammar = {
       sg : {
         englishPrefix : 'the subject verbs',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'the subject verbs',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     placeToWhere : {
@@ -322,14 +324,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       }
     },
     placeWithinWhich : {
@@ -344,14 +348,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       }
     },
     accusativeSubject : {
@@ -361,15 +367,15 @@ export var grammar = {
         englishPrefix : 'the subject perceives/says that',
         englishSuffix : 'this',
         extraSuffix : 'verbs',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'the subject perceives that',
         englishSuffix : 'this',
         extraSuffix : 'verb',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     placeToWhereCities : {
@@ -378,14 +384,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'toward',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        extraSuffix : '(as if a city)',
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'toward',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        extraSuffix : "(as if a city)",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     //ablative
@@ -400,14 +408,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       }
     },
     agent : {
@@ -419,14 +429,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'the subject is verbed by',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'the subject is verbed by',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       }
     },
     accompaniment : {
@@ -439,14 +451,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'the subject verbs together with',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'the subject verbs together with',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       }
     },
     placeFrom : {
@@ -460,14 +474,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'prep',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "prep",
+        latinSuffix : "stem",
+        extraLatinSuffix : "ending",
       }
     },
     placeFromCities: {
@@ -476,14 +492,16 @@ export var grammar = {
       sg : {
         englishPrefix : 'from',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        extraSuffix : '(as if a city)',
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'from',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        extraSuffix : "(as if a city)",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     instrument : {
@@ -492,15 +510,15 @@ export var grammar = {
       sg : {
         englishPrefix : 'the subject uses',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
         extraSuffix : 'to verb'
       },
       pl : {
         englishPrefix : 'the subject uses',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
         extraSuffix : 'to verb'
       }
     },
@@ -511,14 +529,14 @@ export var grammar = {
       sg : {
         englishPrefix : 'this',
         englishSuffix : '!',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'this',
         englishSuffix : '!',
-        latinPrefix : "",
-        latinSuffix : "",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
     //locative
@@ -528,15 +546,17 @@ export var grammar = {
       sg : {
         englishPrefix : 'in',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        extraSuffix : "(as if a city)",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       },
       pl : {
         englishPrefix : 'in',
         englishSuffix : 'this',
-        latinPrefix : "",
-        latinSuffix : "",
+        extraSuffix : "(as if a city)",
+        latinPrefix : "stem",
+        latinSuffix : "ending",
       }
     },
-  }
+  },
 };

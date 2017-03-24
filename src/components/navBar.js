@@ -25,6 +25,7 @@ export default class NavBar extends React.Component{
           <div className="collapse navbar-collapse" id="myNavBar">
             <ul  className="nav navbar-nav">
               <li><Link to="SentencesContainer">Sentence Practice</Link></li>
+              <li><Link to="Login"> Login </Link></li>
               <li className="dropdown">
                 <a className="dropdown-toggle" data-toggle="dropdown" href="#">Noun Practice <span className="caret"></span></a>
                 <ul className="dropdown-menu">

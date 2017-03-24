@@ -11,14 +11,15 @@ export default class NounCaseUsePractice extends React.Component {
             <h2 className="text-center sentence">
               <div> { this.props.randomNoun.dictionaryEntry}</div>
               <div>  { this.props.randomNoun.translation}</div>
+              <div>{this.props.randomNoun.case + " " + this.props.randomNoun.nonCamelCaseUse}</div>
             </h2>
             <h3 className=" text-center sentence">
-              <div>Give the Case and Case Use</div>
+              <div>Give Latin for the Case Use</div>
             </h3>
 
-            <Answer answer={this.props.randomNoun.case + " " + this.props.randomNoun.nonCamelCaseUse} config={this.props.config} answerSentence={true}/>
+            <Answer answer={this.props.randomNoun.getLatin}  config={this.props.config} answerSentence={true}/>
             <SentenceInput
-              answer={[this.props.randomNoun.case + " " + this.props.randomNoun.nonCamelCaseUse]}
+              answer={[this.props.randomNoun.getLatin]}
               question={'noun'}
               checkCorrect={this.props.checkCorrect}
               config={this.props.config}
@@ -30,7 +31,6 @@ export default class NounCaseUsePractice extends React.Component {
               config={this.props.config}
               toggleSetting={this.props.toggleSetting}
             />
-
         </div>
     )
   }

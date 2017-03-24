@@ -8,6 +8,7 @@ import NewRandomAdjective from './NewRandomAdjective'
 export default function NewRandomNoun(Config){
   var noun = pickWord('any', 'nouns', 'declension')
   var usedCaseUse = []
+  console.log(noun)
   if(Config.subject){
     usedCaseUse.push('subject')
   }
@@ -116,7 +117,44 @@ export default function NewRandomNoun(Config){
   }
   noun.translation = getTranslation(noun);
 
+  function getLatin(noun){
+    var result = []
+    result.push(grammar.caseUses[noun.caseUse][noun.number].latinPrefix);
+    result.push(grammar.caseUses[noun.caseUse][noun.number].latinSuffix);
+    if (grammar.caseUses[noun.caseUse][noun.number].extraLatinSuffix) {
+      result.push(grammar.caseUses[noun.caseUse][noun.number].extraLatinSuffix)
+    }
+    return result.map(function(section){
+      if (section === 'prep') {
+        return  noun.prep.latin + " "
+      }
+      // noun.meaning = noun.meaning.match(',') ? utilities().random(noun.meaning.split(', ')) : noun.meaning
+      if (section === 'stem') {
+          //clear Neuter accusative singular going to first dictionary entry
+          if (noun.gender === 'N' && noun.caseUse.case === 'accusative' && noun.number === 'sg') {
+            return '';
+          }
+          else{
+            return  noun.stem
+          }
+        }
+      if (section === 'ending' ) {
+          var ending = grammar[grammar.caseUses[noun.caseUse].case][noun.number][noun.declension + noun.gender];
+          if (ending === 'firstDict') {
+            ending = noun.firstDict
+          }
+          return ending;
+        }
+      if (section === 'firstDict') {
+          return noun.firstDict
+      }
 
+      else {
+        return section
+      }
+    }).join('')
+  }
+  noun.getLatin = getLatin(noun);
 
   noun.translationWithAdjective = noun.translation.replace(noun.meaning, noun.adjective.meaning + " " + noun.meaning)
 

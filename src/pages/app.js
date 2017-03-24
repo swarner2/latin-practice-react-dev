@@ -4,6 +4,7 @@ import NavBar from '../components/navBar.js'
 import WordsStore from '../stores/wordsStore/wordsStore.js'
 import Config from '../stores/config/config.js'
 import GetWordInfoStore from '../stores/getWordInfo/getWordInfo.js'
+import User from '../stores/user/user.js'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ export default class App extends React.Component {
       randomAdjective : WordsStore.randomAdjective,
       randomVerb : WordsStore.randomVerb,
       wordList : WordsStore.wordList,
+      user : User.getAll(),
     };
   }
 

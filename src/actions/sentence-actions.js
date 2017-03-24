@@ -1,5 +1,13 @@
 import dispatcher from "../dispatcher";
 
+export function checkUser(username, password){
+  dispatcher.dispatch({
+    type: "CHECK_USER",
+    username: username,
+    password: password,
+  });
+}
+
 export function checkCorrect(input, correctAnswer){
   dispatcher.dispatch({
     type: "CHECK_CORRECT",
