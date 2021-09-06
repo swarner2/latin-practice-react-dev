@@ -16,8 +16,7 @@ import appLogin from './pages/appLogin';
 render(
   <Router history={hashHistory}>
     <Route path='/' component={App}>
-      <IndexRoute component={appLogin}></IndexRoute>
-      <Route path={"Login"} component={appLogin}></Route>
+      <IndexRoute component={appSentencesContainer}></IndexRoute>
       <Route path={"NounStemPractice"} component={appNounStemPractice}></Route>
       <Route path={"SentencesContainer"} component={appSentencesContainer}></Route>
       <Route path={"NounDeclensionNumberPractice"} component={appNounDeclensionNumberPractice}></Route>
